@@ -91,10 +91,13 @@ html.reduced .marquee__toggle { display: none; }
 .h-card:hover .glaze { transform: scale(1.06) rotate(-1.5deg); }
 .h-card__row { display: flex; justify-content: space-between; margin-top: var(--space-s); gap: var(--space-s); }
 .h-card__title { font-family: var(--font-display); font-size: var(--step-2); line-height: 1; }
-@media (max-width: 899px), (prefers-reduced-motion: reduce) {
+@media (max-width: 899px) {
   .works .h-track { overflow-x: auto; scroll-snap-type: x mandatory; width: auto; padding-bottom: var(--space-s); }
   .h-card { scroll-snap-align: start; width: 78vw; max-width: 420px; }
 }
+/* the viewer opted out of motion: the pinned sideways gallery becomes a swipeable row */
+html.reduced .works .h-track { overflow-x: auto; scroll-snap-type: x mandatory; width: auto; padding-bottom: var(--space-s); }
+html.reduced .h-card { scroll-snap-align: start; width: 78vw; max-width: 420px; }
 
 /* --- numbers --- */
 .numbers { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
