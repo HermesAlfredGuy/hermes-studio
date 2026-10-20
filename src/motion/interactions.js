@@ -82,7 +82,6 @@ export function initCursor() {
 export function initHorizontal() {
   const mm = gsap.matchMedia();
   mm.add('(min-width: 900px)', () => {
-    if (reduced) return; // viewer chose "Reduce motion": native swipeable row instead of a pin
     document.querySelectorAll('[data-horizontal]').forEach((sec) => {
       const track = sec.querySelector('.h-track');
       const dist = () => track.scrollWidth - sec.clientWidth;

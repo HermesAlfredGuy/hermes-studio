@@ -75,27 +75,6 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .split-mask { overflow: clip; display: block; padding-bottom: 0.08em; margin-bottom: -0.08em; }
 .split-line { display: block; }
 
-/* Hide reveal targets only when JS + motion are on, to avoid flash of unstyled content. */
-html.js:not(.reduced) [data-reveal],
-html.js:not(.reduced) [data-split] { visibility: hidden; }
-
-/* the grain is continuous decorative motion: it stops only if the viewer calms the page */
-html.reduced .grain { animation: none; }
-
-/* --- motion toggle -------------------------------------------------------
-   Motion is full by default whatever the OS says (see motion/core.js); this is the
-   viewer's own way to calm the page. Fades stay, parallax/travel/inertia go. */
-.motion-toggle {
-  position: fixed; left: 14px; bottom: 14px; z-index: 9000;
-  font-family: var(--font-mono); font-size: 11px; line-height: 1;
-  text-transform: uppercase; letter-spacing: var(--tracking-label);
-  padding: 10px 14px; border-radius: 999px; cursor: pointer;
-  color: var(--ink);
-  background: color-mix(in oklab, var(--ground) 94%, transparent);
-  border: 1px solid color-mix(in oklab, var(--ink) 32%, transparent); backdrop-filter: blur(8px);
-  opacity: 1;
-  transition: opacity var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
-}
-.motion-toggle:hover,
-.motion-toggle:focus-visible { opacity: 1; color: var(--ink); border-color: color-mix(in oklab, var(--ink) 34%, transparent); }
-@media (max-width: 700px) { .motion-toggle { left: 10px; bottom: calc(10px + env(safe-area-inset-bottom)); padding: 9px 12px; font-size: 10px; } }
+/* Hide reveal targets only when JS is on, to avoid flash of unstyled content. */
+html.js [data-reveal],
+html.js [data-split] { visibility: hidden; }
