@@ -49,6 +49,15 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 p { margin: 0 0 1em; max-width: 62ch; }
 
+/* keyboard-only skip link — the nav sits over the hero, so a keyboard user needs a way past it */
+.skip {
+  position: absolute; left: var(--gutter); top: 0; z-index: 200;
+  padding: 0.9em 1.4em; border-radius: 0 0 var(--radius) var(--radius);
+  background: var(--accent); color: var(--accent-ink); font-weight: 500;
+  transform: translateY(-110%); transition: transform var(--dur-fast) var(--ease-out);
+}
+.skip:focus-visible { transform: translateY(0); }
+
 /* --- layout primitives --- */
 .wrap { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
 .section { padding-block: var(--space-2xl); position: relative; }
@@ -71,8 +80,13 @@ p { margin: 0 0 1em; max-width: 62ch; }
   80% { transform: translate(3%, 3%); }
 }
 
-/* --- split-text masks (used by motion/reveal.js) --- */
-.split-mask { overflow: clip; display: block; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+/* --- split-text masks (used by motion/reveal.js) ---
+   GSAP SplitText clones each line into a wrapper with class "<linesClass>-mask" and sets
+   overflow:clip inline. Without room for descenders below the baseline the mask eats them —
+   studio-qa measured "Made by" and "an agent" losing 29px each. Padding inside the clip,
+   cancelled by the same negative margin, so the layout box is unchanged. */
+.split-mask, .split-line-mask, .split-word-mask, .split-char-mask { overflow: clip; padding: 0.14em 0.08em 0.3em; margin: -0.14em -0.08em -0.3em; }
+.split-mask, .split-line-mask { display: block; }
 .split-line { display: block; }
 
 /* Hide reveal targets only when JS is on, to avoid flash of unstyled content. */

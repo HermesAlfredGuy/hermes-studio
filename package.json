@@ -4,8 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
-    "build": "vite build",
+    "gen": "node scripts/gen-work.mjs",
+    "dev": "npm run gen && vite --host 0.0.0.0",
+    "build": "npm run gen && vite build",
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {

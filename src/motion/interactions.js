@@ -84,7 +84,6 @@ export function initHorizontal() {
   mm.add('(min-width: 900px)', () => {
     document.querySelectorAll('[data-horizontal]').forEach((sec) => {
       const track = sec.querySelector('.h-track');
-      const dist = () => track.scrollWidth - sec.clientWidth;
       const tween = gsap.to(track, {
         x: () => -dist(), ease: 'none',
         scrollTrigger: { trigger: sec, start: 'top top', end: () => '+=' + dist(), pin: true, scrub: 0.8, invalidateOnRefresh: true },
@@ -112,5 +111,26 @@ export function initCounters() {
     if (reduced) { obj.v = end; return render(); }
     render();
     gsap.to(obj, { v: end, duration: 2, ease: 'power3.out', onUpdate: render, scrollTrigger: { trigger: el, start: 'top 85%', once: true } });
+  });
+}
+
+// How far the reel must travel: the track is wider than the viewport by exactly this much.
+export const dist = () => {
+  const sec = document.querySelector('[data-horizontal]');
+  const track = sec?.querySelector('.h-track');
+  return track && sec ? track.scrollWidth - sec.clientWidth : 0;
+};
+
+/* A hairline progress rail above the reel, driven by the reel's own scroll distance. Reads as
+   "you are this far through the work" while the track runs sideways. */
+export function initReelRail() {
+  const rail = document.querySelector('[data-h-rail]');
+  const section = document.querySelector('[data-horizontal]');
+  const bar = rail?.firstElementChild;
+  if (!bar || !section) return;
+  gsap.set(bar, { scaleX: 0, transformOrigin: 'left center' });
+  gsap.to(bar, {
+    scaleX: 1, ease: 'none',
+    scrollTrigger: { trigger: section, start: 'top top', end: () => '+=' + dist(), scrub: 0.3 },
   });
 }

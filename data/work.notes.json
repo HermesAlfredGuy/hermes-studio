@@ -1,0 +1,101 @@
+{
+  "_about": "Curated editorial copy for scripts/gen-work.mjs. The registry (REGISTRY.json) is the source of truth for WHICH projects are live; this file is the voice — one line, what it shows off, and the order. Anything in the registry with showcase:true + a live link appears even without notes here (it gets a generated description). Adding a note is what turns an entry into a proper card. `extras` are projects the registry does not own (this site, the Gallery).",
+  "notes": {
+    "tidework-studio": {
+      "title": "Tidework",
+      "medium": "WebGL brand site",
+      "desc": "A boutique audio studio's site, where the logo is actually a live oscilloscope you can drag.",
+      "shows": ["draggable live WebAudio hero", "to-scale faceplate line art", "3 depth-scrolled columns"],
+      "order": 3
+    },
+    "ember-run": {
+      "title": "Ember Run",
+      "medium": "Browser game",
+      "desc": "Dusk over a dune sea: thread the ember ribbons, dodge the spires, land it in 60 seconds.",
+      "shows": ["fixed-step 3D sim, 60 fps", "hit-stop and slow-mo", "pooled GPU particles"],
+      "order": 2
+    },
+    "vesper": {
+      "title": "Vesper",
+      "medium": "WebGL product page",
+      "desc": "A lamp, lit and finished live in the browser. Crisp edges and a loader whose percentage is real bytes.",
+      "shows": ["4x MSAA composer at native res", "real-progress loading screen", "Lenis scroll, one clock"],
+      "order": 1
+    },
+    "tomo-01": {
+      "title": "Tomo-01",
+      "medium": "Launch page",
+      "desc": "A fictional handheld, as a paper catalogue. The device opens on scroll; both screens are live canvases.",
+      "shows": ["hinge opens 0-113 deg on scroll", "two live canvas LCDs", "playable Pebble Garden in-page"],
+      "order": 4
+    },
+    "handheld-oneshot-test": {
+      "title": "TOCK & friends",
+      "medium": "One-shot launch sites",
+      "desc": "The same brief handed to a model four ways. One page each, shipped without a human editing the words.",
+      "shows": ["brief -> shipped page, one pass", "4 variants, same brief", "no build step"],
+      "order": 5
+    },
+    "afterlight": {
+      "title": "Afterlight",
+      "medium": "Browser game",
+      "desc": "Fly a courier through a floating karst archipelago at dusk, through lit stone rings, to the beacon.",
+      "shows": ["procedural Three.js, zero textures", "2 live self-hosted fonts only", "static, no build"],
+      "order": 6
+    },
+    "itlala": {
+      "title": "Itlala — إطلالة",
+      "medium": "Arabic AI stylist",
+      "desc": "A Saudi styling assistant that starts from the occasion, not the grid: pieces, stores, a price sheet.",
+      "shows": ["RTL sheet + audited ledger", "real Trendyol rows, 216 SKUs", "brief -> phone result in one pass"],
+      "links": [
+        ["Outfit-sheet concept", "https://hermesalfredguy.github.io/itlala-concepts/sheets/"]
+      ],
+      "thumb": "itlala",
+      "order": 7
+    },
+    "nd96": {
+      "title": "ND96 · Asir",
+      "medium": "Live event, 45 phones",
+      "desc": "A projector race that 45 phones steer at once, art-directed as an Asiri mountain town.",
+      "shows": ["45 phones, one host screen", "classic-matched handling", "Asir art pass, IBL lighting"],
+      "order": 8
+    },
+    "kayak-game": {
+      "title": "Wadi Paddle",
+      "medium": "Live event, kayak race",
+      "desc": "The same 45-phone rig, upstream: a night kayak race through a wadi, won on the water.",
+      "shows": ["host screen + phone paddles", "95 tests, zero open", "full motion, always"],
+      "order": 9
+    },
+    "hermes-gallery": {
+      "title": "Hermes Gallery",
+      "medium": "Self-building gallery",
+      "desc": "Every project that ships gets a thumbnail and a card here, on an hourly rebuild, without anyone filing paperwork.",
+      "shows": ["rebuilt hourly from the registry", "screenshots re-shot on change", "no manual curation"],
+      "links": [
+        ["Gallery", "https://hermesalfredguy.github.io/hermes-gallery/"]
+      ],
+      "order": 10
+    },
+    "hermes-studio": {
+      "title": "Hermes Studio",
+      "medium": "This page",
+      "desc": "The site you are reading. Its work list is generated from the registry at build time, so it cannot go stale.",
+      "shows": ["work list built from the registry", "1.6 MB, 61 fps", "re-rendered on every publish"],
+      "order": 11
+    }
+  },
+  "extras": [
+    {
+      "id": "hermes-gallery",
+      "title": "Hermes Gallery",
+      "medium": "Self-building gallery",
+      "desc": "Every project that ships gets a thumbnail and a card here, on an hourly rebuild, without anyone filing paperwork.",
+      "shows": ["rebuilt hourly from the registry", "screenshots re-shot on change", "no manual curation"],
+      "links": [["Gallery", "https://hermesalfredguy.github.io/hermes-gallery/"]],
+      "thumb": "hermes-gallery",
+      "order": 10
+    }
+  ]
+}

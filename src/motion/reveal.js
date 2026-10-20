@@ -21,16 +21,40 @@ function gentleFade(targets, trigger, delay = 0) {
   });
 }
 
+// GSAP SplitText's default aria:"auto" writes aria-label onto the element it splits and
+// aria-hidden onto the pieces. That is legal on a heading but PROHIBITED on a plain span or p —
+// studio-qa reported aria-prohibited-attr on `span[aria-label="Made by"]` from exactly this.
+// So: an element that may carry a name (heading/link/button) keeps GSAP's default; anything else
+// opts out with aria:"none" (GSAP then writes nothing at all), and instead the nearest heading
+// gets the full text as its aria-label while the generated subtree is hidden — the same result,
+// at the level where the attribute is allowed.
+const NAMING = new Set(['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'A', 'BUTTON']);
+const headingFor = (el) => el.closest('h1,h2,h3,h4,h5,h6');
+const headingText = new Map(); // heading -> its full text, captured before the first split
+
+function ariaFor(el) {
+  if (NAMING.has(el.tagName)) return 'auto';
+  const host = headingFor(el);
+  if (!host) return 'none';
+  if (!headingText.has(host)) headingText.set(host, (host.textContent || '').replace(/\s+/g, ' ').trim());
+  const text = headingText.get(host);
+  if (text) host.setAttribute('aria-label', text);
+  el.setAttribute('aria-hidden', 'true');
+  return 'none';
+}
+
 export function splitReveal(el, { intro = false, delay } = {}) {
   const type = el.dataset.split || 'lines';
   const d = delay ?? parseFloat(el.dataset.delay || 0);
   show(el);
   if (reduced) { gentleFade(el, intro ? null : el, d); return null; }
   let tween;
+  const aria = ariaFor(el);
   SplitText.create(el, {
     type: type === 'lines' ? 'lines' : `lines,${type}`,
     mask: 'lines',
     linesClass: 'split-line',
+    aria,
     autoSplit: true, // re-split on resize/font load and keep the animation consistent
     onSplit(self) {
       const parts = type === 'chars' ? self.chars : type === 'words' ? self.words : self.lines;
@@ -71,7 +95,7 @@ export function initReveals(root = document) {
 
   root.querySelectorAll('[data-scrub-words]').forEach((el) => {
     if (reduced) return; // fully legible text, no scrubbing
-    const split = SplitText.create(el, { type: 'words' });
+    const split = SplitText.create(el, { type: 'words', aria: ariaFor(el) });
     gsap.fromTo(split.words, { opacity: 0.14 }, {
       opacity: 1, ease: 'none', stagger: 0.1,
       scrollTrigger: { trigger: el, start: 'top 80%', end: 'bottom 45%', scrub: true },

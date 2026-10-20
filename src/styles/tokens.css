@@ -15,6 +15,8 @@
   --line: color-mix(in oklab, var(--ink) 16%, transparent);
   --accent: #ff6a3d;          /* ONE accent: CTAs, small highlights */
   --accent-ink: #140b07;      /* text on accent */
+  --accent-deep: #a83806;     /* the accent, darkened for light backgrounds: 5.43:1 on --inverse
+                                (the raw accent is 2.38:1 there and failed axe) */
   --inverse: #ecebe4;         /* dark sections */
   --inverse-ink: #0f0f0d;
 
