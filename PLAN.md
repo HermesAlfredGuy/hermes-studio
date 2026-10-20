@@ -42,3 +42,15 @@ clipped glyphs 0, no 390 overflow, reduced motion ok, a11y 0) → phone + deskto
 ## Automation
 Cron "Studio site refresh", 04:00 daily, no-agent: regenerate, and rebuild/republish only when
 `src/work.json` actually changed. Failures only → General.
+
+## Result (2026-10-20)
+
+Shipped to https://hermesalfredguy.github.io/hermes-studio/ — 11 projects generated from REGISTRY.json.
+
+- `npm run build` → `scripts/gen-work.mjs` reads the registry + `data/work.notes.json`, copies
+  thumbnails to `public/media/work/`, writes `src/work.json`; `src/render-work.js` renders the reel
+  and the "All work" grid from it before motion init (the pin measures real card widths).
+- QA (live): clipped glyphs 0, line clash 0, text leaks 0, axe serious 0, 390 px no overflow, 61 fps.
+- Motion stays full: no `prefers-reduced-motion` reads, no toggle (owner rule 2026-10-20).
+- `scripts/refresh.sh` + `scripts/refresh-cron.sh` run daily 04:00 UTC ("Studio site refresh"):
+  regenerate, and republish ONLY if the work list changed; failures go to General.
