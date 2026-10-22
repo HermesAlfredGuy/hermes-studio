@@ -1,5 +1,5 @@
 {
-  "count": 11,
+  "count": 12,
   "items": [
     {
       "id": "vesper",
@@ -162,7 +162,7 @@
       "thumbKey": "itlala",
       "order": 7,
       "repo": "https://github.com/Mkj-ai/ai-personal-shopper",
-      "status": "Outfit-sheets redesign LIVE (2026-10-21):",
+      "status": "Phone UI pass 2 LIVE (2026-10-21 PM):",
       "thumb": "media/work/itlala.jpg",
       "thumbAlt": "Itlala — إطلالة — screenshot"
     },
@@ -189,7 +189,7 @@
       "thumbKey": "nd96",
       "order": 8,
       "repo": "https://github.com/HermesAlfredGuy/nd96-games (private)",
-      "status": "Asir crowd pass LIVE (2026-10-21):",
+      "status": "Asir v2 LIVE (2026-10-21 21:56 UTC, owner-authorised deploy):",
       "thumb": "media/work/nd96.jpg",
       "thumbAlt": "ND96 · Asir — screenshot"
     },
@@ -244,27 +244,50 @@
       "thumbAlt": "Hermes Gallery — screenshot"
     },
     {
-      "id": "hermes-studio",
-      "title": "Hermes Studio",
-      "medium": "This page",
-      "desc": "The site you are reading. Its work list is generated from the registry at build time, so it cannot go stale.",
-      "shows": [
-        "work list built from the registry",
-        "1.6 MB, 61 fps",
-        "re-rendered on every publish"
-      ],
+      "id": "studio",
+      "title": "Hermes Studio — tooling & kits",
+      "medium": "Project",
+      "desc": "Kits:",
+      "shows": [],
       "links": [
         {
-          "label": "Site",
+          "label": "Studio site",
           "url": "https://hermesalfredguy.github.io/hermes-studio/"
+        },
+        {
+          "label": "TIDEWORK site",
+          "url": "https://hermesalfredguy.github.io/tidework-studio/"
+        },
+        {
+          "label": "Ember Run game",
+          "url": "https://hermesalfredguy.github.io/ember-run/"
         }
       ],
-      "thumbKey": "hermes-studio",
-      "order": 11,
+      "thumbKey": "studio",
+      "order": 50,
       "repo": "https://github.com/HermesAlfredGuy/hermes-studio",
-      "status": "Live — work list generated from the registry (11 projects, thumbnails, live links);",
-      "thumb": "media/work/hermes-studio.jpg",
-      "thumbAlt": "Hermes Studio — screenshot"
+      "status": "Kits:",
+      "thumb": "media/work/studio.jpg",
+      "thumbAlt": "Hermes Studio — tooling & kits — screenshot"
+    },
+    {
+      "id": "qahwa-lab",
+      "title": "Qahwa Lab — Khawlani coffee, roasted in Al Khobar",
+      "medium": "Project",
+      "desc": "Live (2026-10-22):",
+      "shows": [],
+      "links": [
+        {
+          "label": "GitHub Pages",
+          "url": "https://hermesalfredguy.github.io/qahwa-lab/"
+        }
+      ],
+      "thumbKey": "qahwa-lab",
+      "order": 50,
+      "repo": "https://github.com/HermesAlfredGuy/qahwa-lab",
+      "status": "Live (2026-10-22):",
+      "thumb": "media/work/qahwa-lab.jpg",
+      "thumbAlt": "Qahwa Lab — Khawlani coffee, roasted in Al Khobar — screenshot"
     }
   ]
 }
