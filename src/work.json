@@ -1,5 +1,5 @@
 {
-  "count": 12,
+  "count": 14,
   "items": [
     {
       "id": "vesper",
@@ -271,6 +271,24 @@
       "thumbAlt": "Hermes Studio — tooling & kits — screenshot"
     },
     {
+      "id": "ledgerline-launch-clip",
+      "title": "Ledgerline — 20 s square launch clip, drawn in code",
+      "medium": "Project",
+      "desc": "2026-10-22:",
+      "shows": [],
+      "links": [
+        {
+          "label": "Proof page",
+          "url": "https://hermesalfredguy.github.io/ledgerline-launch-clip/"
+        }
+      ],
+      "thumbKey": "ledgerline-launch-clip",
+      "order": 50,
+      "repo": "https://github.com/HermesAlfredGuy/ledgerline-launch-clip",
+      "status": "2026-10-22:",
+      "thumb": null
+    },
+    {
       "id": "qahwa-lab",
       "title": "Qahwa Lab — Khawlani coffee, roasted in Al Khobar",
       "medium": "Project",
@@ -288,6 +306,25 @@
       "status": "Live (2026-10-22):",
       "thumb": "media/work/qahwa-lab.jpg",
       "thumbAlt": "Qahwa Lab — Khawlani coffee, roasted in Al Khobar — screenshot"
+    },
+    {
+      "id": "little-lighthouse",
+      "title": "The Little Lighthouse — 50 s hand-inked cel film, drawn in code",
+      "medium": "Project",
+      "desc": "delivered — 4 independent review rounds, gate not passed (film 7/10 r4, page 8.0 r3)",
+      "shows": [],
+      "links": [
+        {
+          "label": "Film page",
+          "url": "https://hermesalfredguy.github.io/really-high-quality-animated/"
+        }
+      ],
+      "thumbKey": "little-lighthouse",
+      "order": 50,
+      "repo": "https://github.com/HermesAlfredGuy/really-high-quality-animated",
+      "status": "delivered — 4 independent review rounds, gate not passed (film 7/10 r4, page 8.0 r3)",
+      "thumb": "media/work/little-lighthouse.jpg",
+      "thumbAlt": "The Little Lighthouse — 50 s hand-inked cel film, drawn in code — screenshot"
     }
   ]
 }
