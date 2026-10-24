@@ -1,5 +1,5 @@
 {
-  "count": 14,
+  "count": 15,
   "items": [
     {
       "id": "vesper",
@@ -286,7 +286,8 @@
       "order": 50,
       "repo": "https://github.com/HermesAlfredGuy/ledgerline-launch-clip",
       "status": "2026-10-22:",
-      "thumb": null
+      "thumb": "media/work/ledgerline-launch-clip.jpg",
+      "thumbAlt": "Ledgerline — 20 s square launch clip, drawn in code — screenshot"
     },
     {
       "id": "qahwa-lab",
@@ -306,6 +307,25 @@
       "status": "Live (2026-10-22):",
       "thumb": "media/work/qahwa-lab.jpg",
       "thumbAlt": "Qahwa Lab — Khawlani coffee, roasted in Al Khobar — screenshot"
+    },
+    {
+      "id": "saqr",
+      "title": "SAQR — falcon over Asir",
+      "medium": "Project",
+      "desc": "Shipped 2026-10-22:",
+      "shows": [],
+      "links": [
+        {
+          "label": "Live",
+          "url": "https://hermesalfredguy.github.io/saqr/"
+        }
+      ],
+      "thumbKey": "saqr",
+      "order": 50,
+      "repo": "https://github.com/HermesAlfredGuy/saqr",
+      "status": "Shipped 2026-10-22:",
+      "thumb": "media/work/saqr.jpg",
+      "thumbAlt": "SAQR — falcon over Asir — screenshot"
     },
     {
       "id": "little-lighthouse",
