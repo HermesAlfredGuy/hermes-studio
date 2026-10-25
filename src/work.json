@@ -1,5 +1,5 @@
 {
-  "count": 15,
+  "count": 16,
   "items": [
     {
       "id": "vesper",
@@ -189,7 +189,7 @@
       "thumbKey": "nd96",
       "order": 8,
       "repo": "https://github.com/HermesAlfredGuy/nd96-games (private)",
-      "status": "Asir v2 LIVE (2026-10-21 21:56 UTC, owner-authorised deploy):",
+      "status": "Asir driving update LIVE, deployed 985675f:",
       "thumb": "media/work/nd96.jpg",
       "thumbAlt": "ND96 · Asir — screenshot"
     },
@@ -326,6 +326,25 @@
       "status": "Shipped 2026-10-22:",
       "thumb": "media/work/saqr.jpg",
       "thumbAlt": "SAQR — falcon over Asir — screenshot"
+    },
+    {
+      "id": "softmax-music-video",
+      "title": "SOFTMAX — Reward Model, kinetic lyric music video",
+      "medium": "Project",
+      "desc": "Delivered:",
+      "shows": [],
+      "links": [
+        {
+          "label": "Watch / download",
+          "url": "https://hermesalfredguy.github.io/softmax-reward-model-music-video/?video=1"
+        }
+      ],
+      "thumbKey": "softmax-music-video",
+      "order": 50,
+      "repo": "https://github.com/HermesAlfredGuy/softmax-reward-model-music-video",
+      "status": "Delivered:",
+      "thumb": "media/work/softmax-music-video.jpg",
+      "thumbAlt": "SOFTMAX — Reward Model, kinetic lyric music video — screenshot"
     },
     {
       "id": "little-lighthouse",
