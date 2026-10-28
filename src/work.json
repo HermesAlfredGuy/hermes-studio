@@ -1,5 +1,5 @@
 {
-  "count": 16,
+  "count": 18,
   "items": [
     {
       "id": "vesper",
@@ -242,6 +242,44 @@
       "status": "",
       "thumb": "media/work/hermes-gallery.jpg",
       "thumbAlt": "Hermes Gallery — screenshot"
+    },
+    {
+      "id": "aura-motion-study",
+      "title": "AURA — 10 s motion study testing mg-styles-15 + video-shotcraft",
+      "medium": "Project",
+      "desc": "delivered — motion gate 3.14, contrast pass (5 -> 1 warning, intended fade)",
+      "shows": [],
+      "links": [
+        {
+          "label": "Film page",
+          "url": "https://hermesalfredguy.github.io/aura-motion-study/"
+        }
+      ],
+      "thumbKey": "aura-motion-study",
+      "order": 50,
+      "repo": "https://github.com/HermesAlfredGuy/aura-motion-study",
+      "status": "delivered — motion gate 3.14, contrast pass (5 -> 1 warning, intended fade)",
+      "thumb": "media/work/aura-motion-study.jpg",
+      "thumbAlt": "AURA — 10 s motion study testing mg-styles-15 + video-shotcraft — screenshot"
+    },
+    {
+      "id": "dallah-img2threejs",
+      "title": "Brass dallah — one photograph to procedural Three.js",
+      "medium": "Project",
+      "desc": "delivered — 6 correction passes, structural pass unlocked, generator bugs fixed",
+      "shows": [],
+      "links": [
+        {
+          "label": "Live model",
+          "url": "https://hermesalfredguy.github.io/dallah/"
+        }
+      ],
+      "thumbKey": "dallah-img2threejs",
+      "order": 50,
+      "repo": "https://github.com/HermesAlfredGuy/dallah",
+      "status": "delivered — 6 correction passes, structural pass unlocked, generator bugs fixed",
+      "thumb": "media/work/dallah-img2threejs.jpg",
+      "thumbAlt": "Brass dallah — one photograph to procedural Three.js — screenshot"
     },
     {
       "id": "studio",
